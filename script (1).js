@@ -45,7 +45,7 @@
    * ------------------------------------------------------------------ */
 
   const $ = (id) => document.getElementById(id);
-  const API_URL = "http://127.0.0.1:8000";
+  const API_URL = "https://nyc-airbnb-room-type-predictor-4-4r64.onrender.com";
 
   const apiBaseInput = $("apiBase");
   const apiStatus = $("apiStatus");
