@@ -45,6 +45,7 @@
    * ------------------------------------------------------------------ */
 
   const $ = (id) => document.getElementById(id);
+  const API_URL = "http://127.0.0.1:8000";
 
   const apiBaseInput = $("apiBase");
   const apiStatus = $("apiStatus");
@@ -109,7 +110,7 @@
   }
 
   async function checkApi() {
-    const base = apiBaseInput.value.trim().replace(/\/+$/, "");
+    const base = API_URL;
     if (!base) {
       setApiStatus("offline", "no address set");
       return;
@@ -266,7 +267,7 @@
       return;
     }
 
-    const base = apiBaseInput.value.trim().replace(/\/+$/, "");
+    const base = API_URL;
     if (!base) {
       showFormAlert("Set the API address above before predicting.");
       return;
